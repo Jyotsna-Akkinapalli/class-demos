@@ -1,0 +1,41 @@
+<h1>Ng Directives Demo</h1>
+<hr>
+<h1>ngIf Demo</h1>
+<button (click)="show = !show">{{show ? 'hide' : 'show'}}</button>  
+    show = {{show}}  
+    <br>  
+    <div *ngIf="show">Text to show</div> 
+<hr>
+<h1>ngFor Demo</h1>
+<table>
+    <thead>  
+        <tr>  
+            <th>Id</th>  
+            <th>Name</th>  
+            <th>Cost</th>  
+        </tr>  
+    </thead>  
+    <tbody>
+    <tr *ngFor="let item of items">
+        <td>
+            {{item.id}}
+        </td>
+        <td>
+            {{item.name}}
+        </td>
+        <td>
+            {{item.cost}}
+        </td>
+    </tr>
+</tbody>
+</table>
+<hr>
+<h1>ngSwitch Demo</h1>
+<select [(ngModel)]="selectedValue">  
+    <option *ngFor="let number of nums;" [value]="number.name">{{number.name}}</option>  
+</select>  
+<div [ngSwitch]="selectedValue">  
+    <div *ngSwitchCase="'One'">One is selected</div>  
+    <div *ngSwitchCase="'Two'">Two is Selected</div>  
+    <div *ngSwitchDefault>Default Option</div>  
+</div>  
