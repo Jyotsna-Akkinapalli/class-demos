@@ -1,0 +1,8 @@
+<h2>SignUp</h2>
+    <form [formGroup]="signUpForm" (ngSubmit)="register()">
+      Username: <input type="text" formControlName="username"><br><br>
+      Profession: <input type="text" formControlName="work"><br><br>
+      Password: <input type="password" formControlName="password"><br><br>
+      <input type="submit" value="Submit">
+    </form>
+    <p> {{message}} </p>
